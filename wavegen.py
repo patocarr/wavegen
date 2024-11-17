@@ -175,13 +175,13 @@ class Wavegen:
         data = []
         fadj = sampling_freq / length * int(freq * length / sampling_freq)
         self.adj_freq.set(fadj)
-        #print(f"Frequency adjustment, Requested = {freq}, Adjusted = {fadj}")
+        # print(f"Frequency adjustment, Requested = {freq}, Adjusted = {fadj}")
         for i in range(length):
-            data.append(math.cos(i * 2 * math.pi * fadj / sampling_freq) * amplitude)
             if cw_type:  # complex
                 data.append(
-                    math.sin(i * 2 * math.pi * fadj / sampling_freq) * amplitude
+                    math.cos(i * 2 * math.pi * fadj / sampling_freq) * amplitude
                 )
+            data.append(math.sin(i * 2 * math.pi * fadj / sampling_freq) * amplitude)
         return data
 
     def savefile(self, data):
