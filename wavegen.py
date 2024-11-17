@@ -182,6 +182,7 @@ class Wavegen:
                     math.cos(i * 2 * math.pi * fadj / sampling_freq) * amplitude
                 )
             data.append(math.sin(i * 2 * math.pi * fadj / sampling_freq) * amplitude)
+        #self.plot(data)
         return data
 
     def savefile(self, data):
@@ -195,8 +196,8 @@ class Wavegen:
                 new_value = struct.pack("<h", value)
                 f.write(new_value)
 
-    def plot(data):
-        plt.plot(data[0:64])
+    def plot(self, data):
+        plt.plot(data[0:32])
         plt.title("Time Domain")
         plt.xlabel("Sample")
         plt.ylabel("ADC Code")
