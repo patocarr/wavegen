@@ -37,7 +37,7 @@ class TestViewAskText(WavegenTestCase):
 
         #self.assertRaises(tk.TclError, lambda: v.frame.winfo_viewable())
         self.assertEqual(v.sampling.get(),u'6400.02')
-        self.assertEqual(v.fname.get(),u'real_6400.02MHz_2.0MHz_8x_0.707a')
+        self.assertEqual(v.fname.get(),u'cplx_6400.02MHz_2.0MHz_40x_1.0a')
 
 
 if __name__ == '__main__':
