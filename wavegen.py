@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 
 import tkinter as tk
-from tkinter import messagebox
-from tkinter import ttk
 
 import math
-import matplotlib.style
 from matplotlib import pyplot as plt
-import matplotlib as mpl
 import struct
 import configparser
 
