@@ -12,7 +12,7 @@ The script requires Python3 with Tkinter module, which should come with all Pyth
 On Fedora 36, I had to install the modules with the following:
 
     $ sudo dnf install python3-tkinter
-    $ sudo pip install matplotlib
+    $ pip install matplotlib
 
 To run the script:
 
