@@ -38,7 +38,7 @@ class Wavegen:
 
     def createWidgets(self):
         # type_frame = Frame(self.root, height=15, bd=5, relief=GROOVE, padx=5, pady=5)
-        frame = tk.Frame(self.root, bd=3, relief=tk.GROOVE, padx=10, pady=10)
+        self.frame = frame = tk.Frame(self.root, bd=3, relief=tk.GROOVE, padx=10, pady=10)
         frame.grid(row=3, column=3, sticky=tk.NW)
 
         row = 0
@@ -52,7 +52,7 @@ class Wavegen:
 
         row += 1
         tk.Label(frame, text="Sampling Frequency (MHz)").grid(column=0, row=row)
-        sampling = tk.Entry(frame, textvariable=self.sampling_freq, width=10)
+        sampling = self.sampling = tk.Entry(frame, textvariable=self.sampling_freq, width=10)
         sampling.grid(column=1, row=row)
         sampling.bind("<FocusOut>", self.setFilename)
 
@@ -85,7 +85,7 @@ class Wavegen:
 
         row += 1
         tk.Label(frame, text="File Name").grid(column=0, row=row, sticky=tk.E)
-        fname = tk.Entry(frame, textvariable=self.filename, width=30)
+        fname = self.fname = tk.Entry(frame, textvariable=self.filename, width=30)
         fname.grid(column=1, row=row, padx=20, columnspan=2)
 
         row += 1
