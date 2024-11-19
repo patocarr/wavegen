@@ -6,7 +6,7 @@
 
 import unittest
 import tkinter as tk
-from src.wavegen.wavegen import Wavegen
+from wavegen import Wavegen
 
 
 class WavegenTestCase(unittest.TestCase):
